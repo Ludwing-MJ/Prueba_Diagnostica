@@ -4,7 +4,7 @@
 # DPI: 3058 88165 0301
 
 # Enlace Github Proyecto:
-# 
+# https://github.com/Ludwing-MJ/Prueba_Diagnostica
 
 ################################################################################
 # PRUEBA DIAGNOSTICA
