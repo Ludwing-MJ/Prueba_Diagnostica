@@ -14,9 +14,6 @@
 ## Para manipulación y visualización de datos
 if (!require(tidyverse)) install.packages("tidyverse")
 
-## Para exportar archivos en excel
-if (!require(writexl)) install.packages("writexl")
-
 ## Para importar archivos en excel
 if (!require(readxl)) install.packages("readxl")
 ################################################################################
@@ -30,10 +27,11 @@ ej2 <- read_excel("Datos_prueba_diagnostica.xlsx", sheet = 3)
 # TEMA 1: ESTADÍSTICA DESCRIPITIVA PARA DATOS AGRUPADOS
 # Calculos exploratorios
 datosej1 <- calcular_parametros_desde_tabla(ej1)
+datosej1$amplitud <- 10 
 
 # Histograma
 histograma_ej1 <- ggplot(ej1, aes(x = Marca_Clase, y = Frecuencia_Relativa)) +
-  geom_col(width = datosej1$amplitud * 1.1, 
+  geom_col(width = datosej1$amplitud, 
            fill = "lightblue", 
            color = "black") +
   scale_x_continuous(
@@ -47,6 +45,7 @@ cajeros de un almacén necesitaron para servir a una muestra de clientes",
        y = "Frecuencia relativa") +
   theme_minimal()
 ggsave("histograma_ej1.jpg")
+histograma_ej1
 
 # Calculo de la media
 mtc1 <- calcular_tendencia_central(ej1, datosej1)
