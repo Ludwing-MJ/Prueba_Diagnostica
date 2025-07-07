@@ -27,7 +27,6 @@ ej2 <- read_excel("Datos_prueba_diagnostica.xlsx", sheet = 3)
 # TEMA 1: ESTADÍSTICA DESCRIPITIVA PARA DATOS AGRUPADOS
 # Calculos exploratorios
 datosej1 <- calcular_parametros_desde_tabla(ej1)
-datosej1$amplitud <- 10 
 
 # Histograma
 histograma_ej1 <- ggplot(ej1, aes(x = Marca_Clase, y = Frecuencia_Relativa)) +

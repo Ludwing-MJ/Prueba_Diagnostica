@@ -176,7 +176,7 @@ calcular_parametros_desde_tabla <- function(tabla) {
   x_max <- max(tabla$Limite_Superior)
   rango <- x_max - x_min
   k <- nrow(tabla)
-  amplitud <- (tabla$Limite_Superior[1] - tabla$Limite_Inferior[1])
+  amplitud <- (tabla$Limite_Inferior[2] - tabla$Limite_Inferior[1])
   
   return(list(
     n = n,
